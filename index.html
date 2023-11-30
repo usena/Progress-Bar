@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Language</title>
+        <script src="http://code.jquery.com/jquery-1.4.4.min.js" type="text/javascript"></script>
+        <script type="text/javascript" charset="utf-8">
+            $(document).ready(function(){
+                $(".progress-bar").each(function(){
+                    var percentage = parseInt($(this).html());
+                    if(percentage > 0){
+                        $(this).animate({'width':''+percentage+'px'}, 800);
+                    }
+                    else{
+                        $(this).css({'color':'black', 'background':'none'}, 800);
+                    }
+                });
+            });
+        </script>
+        <style type="text/css" media="screen">
+        *{ font-family: "Lucida Grande";}
+        .progress-bar-holder{
+            width: 125px;
+            border: 1px solid #ccc;
+            padding: 0.2em;
+            margin: 1em 0.2em;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+
+        .progress-bar{
+            height: 30px;
+            color: #fff;
+            font-weight: bold;
+            text-align: right;
+            background: #63A25C;
+            width: 0px;
+            padding: 0.8em;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+        
+        a{ color: red; }
+        a:hover{ color: green;}
+        
+        </style>
+        <!--Source: https://gist.github.com/timmatheson/764473-->
+    </head>
+    <body>
+        <h1>Language Progress Bar</h1>
+        <h4>Chinese</h4>
+        <div class='progress-bar-holder'>
+            <div class='progress-bar'>
+                0%
+            </div>
+        </div>
+
+        <h4>Khmer</h4>
+        <div class='progress-bar-holder'>
+            <div class='progress-bar'>
+                70%
+            </div>
+        </div>
+
+        <h4>English</h4>
+        <div class='progress-bar-holder'>
+            <div class='progress-bar'>
+                85%
+            </div>
+        </div>
+
+        <h4>Korean</h4>
+        <div class='progress-bar-holder'>
+            <div class='progress-bar'>
+                3%
+            </div>
+        </div>
+        
+        <a href="">Replay</a>
+        
+    </body>
+</html>
